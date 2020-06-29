@@ -10,4 +10,4 @@ app.use(routes)
 
 /*Query, params, body */
 
-app.listen(3333);
+app.listen(process.env.PORT || 3000);
