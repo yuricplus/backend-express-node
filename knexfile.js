@@ -3,21 +3,27 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'postgresql',
     connection: {
-      filename: './src/database/db.sqlite'
+      database: 'postgres://dapcteqtcxktak:e956f24547a9b807301de75e4b71051c1a2f281044e12d60a8aed2904b69bb23@ec2-50-17-21-170.compute-1.amazonaws.com:5432/dcf61sebpr0glv',
+      user:     'dapcteqtcxktak',
+      password: 'e956f24547a9b807301de75e4b71051c1a2f281044e12d60a8aed2904b69bb23'
+    },
+    pool: {
+      min: 2,
+      max: 10
     },
     migrations: {
-      directory: './src/database/migrations'
+      tableName: 'knex_migrations'
     }
   },
 
   staging: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database: ' postgres://dapcteqtcxktak:e956f24547a9b807301de75e4b71051c1a2f281044e12d60a8aed2904b69bb23@ec2-50-17-21-170.compute-1.amazonaws.com:5432/dcf61sebpr0glv',
+      user:     'dapcteqtcxktak',
+      password: 'e956f24547a9b807301de75e4b71051c1a2f281044e12d60a8aed2904b69bb23'
     },
     pool: {
       min: 2,
@@ -31,9 +37,9 @@ module.exports = {
   production: {
     client: 'sqlite3',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database: ' postgres://dapcteqtcxktak:e956f24547a9b807301de75e4b71051c1a2f281044e12d60a8aed2904b69bb23@ec2-50-17-21-170.compute-1.amazonaws.com:5432/dcf61sebpr0glv',
+      user:     'dapcteqtcxktak',
+      password: 'e956f24547a9b807301de75e4b71051c1a2f281044e12d60a8aed2904b69bb23'
     },
     pool: {
       min: 2,
